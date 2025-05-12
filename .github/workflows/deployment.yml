@@ -25,7 +25,9 @@ jobs:
 
       # Install dependencies and run tests
       - name: Install dependencies
-        run: npm install
+        run: | 
+          npm install
+          npm install --save-dev jest jest-environment-jsdom
 
       - name: Run tests
         run: npm test
